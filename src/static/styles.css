@@ -30,15 +30,43 @@ header h1 {
 
 main {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 30px;
-  justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 768px) {
   main {
-    grid-template-columns: 2fr 1fr;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
   }
+}
+/* Register form styles */
+.register-container {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+.register-form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.register-form input[type="email"] {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+.register-form button {
+  padding: 8px 12px;
+  font-size: 15px;
+  border-radius: 4px;
 }
 
 section {
